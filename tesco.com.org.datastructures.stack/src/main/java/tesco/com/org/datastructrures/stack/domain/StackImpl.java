@@ -18,10 +18,10 @@ public class StackImpl implements Stack{
 	}
 
 	public void push(Object num) throws Exception {
-		if (top >= size)
-			throw new Exception("Stack overflow");
+		if (size>top+1)
+			item[++top] = num;			
 		else
-			item[++top] = num;
+			throw new Exception("Stack overflow");
 	}
 	public Object pop() throws Exception{
 		if(top==-1)

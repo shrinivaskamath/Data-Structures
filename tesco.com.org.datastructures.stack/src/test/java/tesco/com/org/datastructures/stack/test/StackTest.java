@@ -29,7 +29,7 @@ public void shouldThrowStackOverflowErrorWhenMoreThanFiveItemsArePushed() throws
 	stack.push(5);
 	stack.push(3);
 	stack.push(5);
-	stack.push(3);
+	stack.push(7);
 }
 @Test	
 public void shouldPushElementToStackOfSizeThreeWhenTheStackIsEmpty() throws Exception{
@@ -47,10 +47,10 @@ public void shouldPushElementToStackOfSizeThreeWhenTheStackIsEmptyAndThereIsAnEl
 @Test(expected = Exception.class)
 public void shouldThrowStackOverflowErrorWhenMoreThanThreeItemsArePushed() throws Exception{
 	Stack stack=new StackImpl(3);
-	stack.push(5);
-	stack.push(3);
-	stack.push(5);
-	stack.push(3);	
+	stack.push(10);
+	stack.push(20);
+	stack.push(30);
+	stack.push(40);	
 }
 @Test(expected = Exception.class)
 public void shouldThrowStackUnderflowErrorWhenPopIsPerformedWhenStackIsEmpty() throws Exception{
